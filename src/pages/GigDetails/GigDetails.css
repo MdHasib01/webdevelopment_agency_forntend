@@ -1,0 +1,19 @@
+.gig-details-image {
+  height: 380px;
+  width: 680px;
+}
+.gig-details-profile {
+  display: flex;
+  margin-bottom: 10px;
+}
+.gig-details-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.gig-package {
+  display: flex;
+  justify-content: space-between;
+}

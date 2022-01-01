@@ -20,3 +20,10 @@
   display: flex;
   justify-content: center;
 }
+.gig-card-link {
+  color: black;
+  text-decoration: none;
+}
+.gig-card-link:hover {
+  color: black;
+}

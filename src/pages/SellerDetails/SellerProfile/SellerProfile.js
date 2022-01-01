@@ -1,5 +1,5 @@
 import React from "react";
-import sellerImage from "../../../Assets/gigImage/gigImage.jpg";
+import sellerImage from "../../../Assets/gigImage/profile-image.jpg";
 import "./SellerProfile.css";
 
 const SellerProfile = () => {
@@ -7,7 +7,7 @@ const SellerProfile = () => {
     <div className="seller-profile-details">
       <div className="seller-profile-top">
         <img src={sellerImage} alt="" />
-        <h5>Hitesh001</h5>
+        <h5>Pori007</h5>
         <p>I will design your amazon product listing images</p>
         <p>5 stars (400 reviews)</p>
         <button className="primary-btn">Contact me</button>
