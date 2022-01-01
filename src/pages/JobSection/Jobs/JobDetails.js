@@ -16,7 +16,10 @@ const JobDetails = ({job}) => {
           </div>
         </div>
         <div className="job-info">
-        <img className="jobLogo" src={avatar} alt="" />
+          <div className="jobLogo">
+          <img  src={avatar} alt="" />
+          </div>
+        
        <div className="jobReq">
        <h5>Rashidul islam</h5>
             <h5>Rashidul islam</h5>
