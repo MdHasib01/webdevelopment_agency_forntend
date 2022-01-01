@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerImg from "../../../Assets/image/banner/1.png";
+import "./TopBanner.css";
 
 const TopBanner = () => {
   return (
