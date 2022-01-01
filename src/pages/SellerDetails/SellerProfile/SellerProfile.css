@@ -1,0 +1,22 @@
+.seller-profile-details {
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.seller-profile-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seller-profile-top img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.seller-profile-top button {
+  width: 100%;
+}
+.seller-profile-details table {
+  width: 100%;
+}
