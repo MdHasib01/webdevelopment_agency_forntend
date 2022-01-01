@@ -1,0 +1,136 @@
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.buyer-profile {
+  margin: 10px 10px 0px 10px;
+}
+
+.buyerProfile a {
+  margin: 0px 0px 0px 10px;
+}
+
+.job-icon {
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.profile-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.jobCard {
+  display: inline;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  min-height: 55vh;
+  width: 100%;
+  box-shadow: 0px 0px 8px 3px rgb(223, 220, 220);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.jobCard:hover {
+  border: 1px solid #363331;
+  border-radius: 5px;
+  transform: translateY(-15px);
+  transition: all 0.4s ease-in-out;
+  background-color: white;
+}
+
+.details-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 25px;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+/* Job details page */
+.customContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.jobDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  border: 1px solid gray;
+  /* flex-direction: column; */
+}
+
+.buyerProfile {
+  width: 30%;
+  height: 80vh;
+  border: 1px solid gray;
+}
+.buyerImg {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.buyerInfo {
+  text-align: center;
+}
+
+.job-info {
+  width: 70%;
+  height: 90vh;
+  border: 1px solid gray;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #1bc073;
+}
+
+.jobIcon {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 1px solid gray;
+  text-align: center;
+}
+.jobIcon img {
+  width: 100%;
+}
+.jobReq {
+  width: 50%;
+  height: 100%;
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.jobLogo {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
