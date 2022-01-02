@@ -1,36 +1,9 @@
-<<<<<<< HEAD
-* {
-  margin: 0;
-  padding: 0;
+*{
   box-sizing: border-box;
+  overflow: hidden;
+
 }
 
-.top-banner {
-  margin-top: 60px;
-}
-.top-banner-left-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-.top-banner-left-col p {
-  font-size: 15px;
-  line-height: 26px;
-  color: #212d31;
-  margin-bottom: 33px;
-}
-.top-banner-left-col h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: #212d31;
-  line-height: 50px;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-}
-
-=======
->>>>>>> 3c8191058bd6751bb1627876c6e46f5694ddf8fe
 .primary-btn {
   border: 2px solid #09c48c;
   font-size: 15px;
@@ -48,3 +21,4 @@
   background: #0ab481;
   box-shadow: 2px 2px 5px gray;
 }
+
