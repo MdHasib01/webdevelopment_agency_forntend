@@ -69,17 +69,22 @@
   align-items: center;
   width: 100%;
   height: 90vh;
-  border: 1px solid gray;
-  /* flex-direction: column; */
 }
 
 .buyerProfile {
   width: 25%;
-  height: 70vh;
+  min-height: 70vh;
   box-shadow: 0px 0px 8px 3px rgb(223, 220, 220);
+  /* border: 1px solid black; */
   border-radius: 10px;
   background-color: white;
+  margin-right: 10px;
 }
+
+.buyerProfile:hover {
+  border: 2px solid #6047ec;
+}
+
 .buyerImg {
   display: block;
   margin: 0 auto;
@@ -96,15 +101,64 @@
 }
 
 .job-info {
+  display: flex;
   width: 70%;
-  height: 90vh;
-  border: 1px solid gray;
+  height: 92vh;
+  box-shadow: 0px 0px 8px 3px rgb(223, 220, 220);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.jobReq {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+/* display-comment */
+
+.comment-section {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+  height: 100%;
+}
+
+.display-comment {
+  max-height: 50vh;
+  width: 380px;
+  padding: 10px;
+  border: 2px solid #6047ec;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: justify;
   overflow: hidden;
   overflow-y: scroll;
 }
 
+.comment-img {
+  width: 50px;
+  padding: 10px;
+}
+
+.input:focus {
+  border: 2px solid #6047ec;
+  outline: none;
+}
+
+.input {
+  width: 380px;
+  height: 160px;
+  border: 2px solid #6047ec;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   border-radius: 5px;
@@ -112,30 +166,94 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #1bc073;
+  border-radius: 3px;
+  background-color: #6047ec;
 }
 
-.jobIcon {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  border: 1px solid gray;
-  text-align: center;
-}
-.jobIcon img {
-  width: 100%;
-}
-.jobReq {
-  width: 50%;
-  height: 100%;
-  border: 1px solid gray;
-  text-align: center;
+@media (max-width: 700px) {
+  .buyerProfile {
+    width: 100%;
+    min-height: 100vh;
+    box-shadow: 0px 0px 0px 0px rgb(223, 220, 220);
+    margin-top: 170px;
+  }
+
+  .buyerImg {
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 250px;
+    margin-bottom: 20px;
+    border: 2px solid gray;
+  }
+
+  .jobDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    flex-direction: column;
+  }
+
+  .job-info {
+    display: flex;
+    flex-direction: column;
+    display: block;
+    width: 100%;
+    height: 90vh;
+    box-shadow: 0px 0px 0px 0px rgb(223, 220, 220);
+  }
+
+  .jobReq {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .comment-section {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .display-comment {
+    max-height: 50vh;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: justify;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .input {
+    width: 100%;
+    height: 140px;
+    margin-top: 10px;
+    border: 1px solid black;
+  }
 }
 
-.jobLogo {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
+/* custom style  */
+
+.customBtn {
+  outline: none;
+  padding: 08px 20px;
+  background: #ff428d;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.customBtn:hover {
+  background: #6047ec;
+  transition: 0.3s;
 }

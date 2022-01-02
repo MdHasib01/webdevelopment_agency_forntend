@@ -14,38 +14,46 @@ const JobDetails = () => {
           <img className="buyerImg" src={avatar} alt="" />
           <div className="buyerInfo">
             <h4>MD. RASHIDUL ISLAM</h4>
+            <h4>MD. RASHIDUL ISLAM</h4>
+            <h4>MD. RASHIDUL ISLAM</h4>
+            <h4>MD. RASHIDUL ISLAM</h4>
+            <h4>MD. RASHIDUL ISLAM</h4>
           </div>
         </div>
 
         <div className="job-info">
           <div className="jobReq">
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
-            <h5>Rashidul islam</h5>
+            <h1>Job Requirement</h1>
           </div>
+
           <div className="comment-section">
-            <div className="display-comment"></div>
+            <div className="display-comment">
+              <img className="comment-img" src={avatar} alt="" />{" "}
+              <span>Name</span>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur voluptatum suscipit a accusamus dolor quisquam
+                repudiandae esse optio dignissimos natus.{" "}
+              </p>
+              <img className="comment-img" src={avatar} alt="" />{" "}
+              <span>Name</span>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur voluptatum suscipit a accusamus dolor quisquam
+                repudiandae esse optio dignissimos natus.{" "}
+              </p>
+            </div>
+
             <div className="add-comment">
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("message", { required: true })} />
-                <input type="submit" />
+              <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                <textarea
+                  className="input"
+                  placeholder="Message"
+                  {...register("message", { required: true })}
+                />
+                <input className="customBtn" type="submit" />
               </form>
             </div>
           </div>
