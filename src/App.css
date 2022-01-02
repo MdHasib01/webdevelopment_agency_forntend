@@ -1,7 +1,7 @@
-*{
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
-
 }
 
 .primary-btn {
@@ -21,4 +21,3 @@
   background: #0ab481;
   box-shadow: 2px 2px 5px gray;
 }
-
