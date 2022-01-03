@@ -21,9 +21,9 @@ const GigPackage = () => {
           <i class="bi bi-bootstrap-reboot"></i> 2 Reviews
         </p>
         <hr />
-        <div style={{ fontWeight: "bold" }}>
+        <div>
           <h6>What you will get?</h6>
-          <ul>
+          <ul className="list-item">
             <li>1 Image</li>
             <li>High Resolution</li>
             <li>Commercial Use</li>

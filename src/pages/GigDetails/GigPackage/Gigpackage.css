@@ -3,3 +3,11 @@
   padding: 10px;
   border-radius: 10px;
 }
+.list-item li {
+  list-style: none;
+}
+.list-item li::before {
+  content: "\2713";
+  color: #0ab481;
+  margin-right: 5px;
+}

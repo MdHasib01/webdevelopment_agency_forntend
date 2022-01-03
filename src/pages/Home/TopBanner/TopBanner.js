@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerImg from "../../../Assets/image/banner/1.png";
+
 import "./TopBanner.css";
 
 const TopBanner = () => {
   return (
     <div className="top-banner">
       <Container>
-        <Row md={2}>
+        <Row md={2} sm={1} xs={1}>
           <Col className="top-banner-left-col">
             <h1>THE BEST WAY TO RUN YOUR BUSINESS IN REAL-TIME</h1>
             <p>

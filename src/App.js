@@ -9,6 +9,7 @@ import JobDetails from "./pages/JobSection/Jobs/JobDetails";
 import Jobs from "./pages/JobSection/Jobs/Jobs";
 import Login from "./pages/Login/Login";
 import SellerDetails from "./pages/SellerDetails/SellerDetails";
+import Footer from "./pages/shared/Footer/Footer";
 import NavigationBar from "./pages/shared/NavigationBar/NavigationBar";
 import SignUp from "./pages/SignUp/SignUp";
 
@@ -39,6 +40,7 @@ function App() {
           </Route>
           {/* dashboard ends */}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

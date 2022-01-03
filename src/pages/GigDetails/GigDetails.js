@@ -6,7 +6,6 @@ import SellerProfile from "../SellerDetails/SellerProfile/SellerProfile";
 import GigComments from "./GigComments/GigComments";
 import "./GigDetails.css";
 import GigPackage from "./GigPackage/GigPackage";
-import SimpleSlider from "./SimpleSlider";
 
 const GigDetails = () => {
   return (
@@ -31,7 +30,8 @@ const GigDetails = () => {
             />
 
             <GigComments />
-            <SimpleSlider />
+
+            <br />
             <h4>About The Seller</h4>
             <SellerProfile />
             <div className="more-about-seller">
