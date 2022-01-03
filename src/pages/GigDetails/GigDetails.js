@@ -19,7 +19,8 @@ const GigDetails = () => {
               <p>
                 pori007 <span style={{ color: "gray" }}>Level 2 seller</span> |{" "}
                 <i className="bi bi-star-fill" style={{ color: "#ffbe5b" }}></i>{" "}
-                5(469) | 6 orders in Queue
+                <span style={{ color: "#ffbe5b" }}>5</span>(469) | 6 orders in
+                Queue
               </p>
             </div>
             <img

@@ -11,7 +11,11 @@ const GigComments = () => {
           <img src={buyerProfile} alt="" />
         </div>
         <div className="gig-comments">
-          <h6>Buyer Name | Bangladesh | 5 Stars</h6>
+          <h6>
+            Buyer Name | Bangladesh |{" "}
+            <i className="bi bi-star-fill" style={{ color: "#ffbe5b" }}></i>{" "}
+            <span style={{ color: "#ffbe5b" }}>5</span>
+          </h6>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
             consequatur consequuntur corrupti provident dolorum iste sit veniam
