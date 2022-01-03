@@ -1,13 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+
 import GigDetails from "./pages/GigDetails/GigDetails";
 import Home from "./pages/Home/Home/Home";
-<<<<<<< HEAD
 import JobDetails from "./pages/JobSection/Jobs/JobDetails";
 import Jobs from "./pages/JobSection/Jobs/Jobs";
-=======
 import SellerDetails from "./pages/SellerDetails/SellerDetails";
->>>>>>> 3c8191058bd6751bb1627876c6e46f5694ddf8fe
 import NavigationBar from "./pages/shared/NavigationBar/NavigationBar";
 
 function App() {
@@ -17,13 +15,10 @@ function App() {
         <NavigationBar />
         <Routes>
           <Route path="/" element={<Home />} />
-<<<<<<< HEAD
           <Route path="jobs" element={<Jobs />} />
           <Route path="jobDetails" element={<JobDetails />} />
-=======
           <Route path="seller-profile" element={<SellerDetails />} />
           <Route path="gig_details" element={<GigDetails />} />
->>>>>>> 3c8191058bd6751bb1627876c6e46f5694ddf8fe
         </Routes>
       </BrowserRouter>
     </div>

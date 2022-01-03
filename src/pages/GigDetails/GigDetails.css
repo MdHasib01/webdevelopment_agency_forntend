@@ -17,3 +17,16 @@
   display: flex;
   justify-content: space-between;
 }
+.more-about-seller {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media (min-width: 480px) {
+  .gig-package-position {
+    position: sticky;
+    top: 10px;
+  }
+}
