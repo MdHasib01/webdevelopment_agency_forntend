@@ -14,11 +14,14 @@ const NavigationBar = () => {
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="jobs">
+              <Nav.Link as={Link} to="/jobs">
                 Jobs
               </Nav.Link>
-              <Nav.Link as={Link} to="jobDetails">
+              <Nav.Link as={Link} to="/jobDetails">
                 Job Details
+              </Nav.Link>
+              <Nav.Link as={Link} to="/quizSection">
+                Quiz
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -1,14 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/Home/Home/Home";
-import JobDetails from "./pages/JobSection/Jobs/JobDetails";
-import Jobs from "./pages/JobSection/Jobs/Jobs";
+import Header from "./components/Header/Header";
 import Quiz from "./pages/Quiz/Quiz";
 import QuizHome from "./pages/QuizHome/QuizHome";
 import Result from "./pages/Result/Result";
-import NavigationBar from "./pages/shared/NavigationBar/NavigationBar";
 
 function App() {
   const [questions, setQuestions] = useState();
@@ -24,35 +20,19 @@ function App() {
 
     setQuestions(data.results);
   };
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <NavigationBar />
+    <BrowserRouter>
+      <div className="app" style={{ backgroundImage: 'url("/ques1.png")' }}>
+        <Header />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route exact path="/home">
-            <Home />
-          </Route>
-
-          <Route path="/jobs">
-            <Jobs />
-          </Route>
-
-          <Route path="/jobDetails">
-            <JobDetails />
-          </Route>
-
-          <Route path="/quizSection">
+          <Route path="/" exact>
             <QuizHome
               name={name}
               setName={setName}
               fetchQuestions={fetchQuestions}
             />
           </Route>
-
           <Route path="/quiz">
             <Quiz
               name={name}
@@ -62,13 +42,12 @@ function App() {
               setQuestions={setQuestions}
             />
           </Route>
-
           <Route path="/result">
             <Result name={name} score={score} />
           </Route>
         </Switch>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
