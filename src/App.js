@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
+import Contact from "./Pages/contact/Contact";
 import BuyerDetails from "./Pages/Dashboard/Buyer/BuyerDetails/BuyerDetails";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import Profiles from "./Pages/Dashboard/Seller/Profiles/Profiles";
@@ -12,22 +12,9 @@ import Jobs from "./Pages/Job's/Jobs";
 import LogIn from "./Pages/LogIn/LogIn/LogIn";
 import PrivateRoute from "./Pages/LogIn/PrivateRoute/PrivateRoute";
 import Register from "./Pages/LogIn/Register/Register";
+import Punishment from "./Pages/Punishment/Punishment";
 
 function App() {
-  const [questions, setQuestions] = useState();
-  const [name, setName] = useState();
-  const [score, setScore] = useState(0);
-
-  // // const fetchQuestions = async (category = "", difficulty = "") => {
-  // //   const { data } = await axios.get(
-  // //     `https://opentdb.com/api.php?amount=10${
-  // //       category && `&category=${category}`
-  // //     }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
-  // //   );
-
-  // //   setQuestions(data.results);
-  // };
-
   return (
     <div>
       <AuthProvider>
@@ -39,32 +26,6 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-
-            {/* quiz start */}
-
-            {/* <Route path="/quizSection">
-              <QuizHome
-                name={name}
-                setName={setName}
-                fetchQuestions={fetchQuestions}
-              />
-            </Route>
-
-            <Route path="/quiz">
-              <Quiz
-                name={name}
-                questions={questions}
-                score={score}
-                setScore={setScore}
-                setQuestions={setQuestions}
-              />
-            </Route>
-
-            <Route path="/result">
-              <Result name={name} score={score} />
-            </Route>
-            quiz end */}
-
             <Route path="/login">
               <LogIn />
             </Route>
