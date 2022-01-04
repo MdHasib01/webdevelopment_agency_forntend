@@ -1,47 +1,75 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import BestSellers from "./pages/Dashboard/BestSellers";
-import Dashboard from "./pages/Dashboard/DashBoard";
-import Users from "./pages/Dashboard/Users";
-import GigDetails from "./pages/GigDetails/GigDetails";
-import Home from "./pages/Home/Home/Home";
-import JobDetails from "./pages/JobSection/Jobs/JobDetails";
-import Jobs from "./pages/JobSection/Jobs/Jobs";
-import Login from "./pages/Login/Login";
-import SellerDetails from "./pages/SellerDetails/SellerDetails";
-import Footer from "./pages/shared/Footer/Footer";
-import NavigationBar from "./pages/shared/NavigationBar/NavigationBar";
-import SignUp from "./pages/SignUp/SignUp";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AuthProvider from "./context/AuthProvider/AuthProvider";
+import Contact from "./Pages/contact/Contact";
+import BuyerDetails from "./Pages/Dashboard/Buyer/BuyerDetails/BuyerDetails";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import Profiles from "./Pages/Dashboard/Seller/Profiles/Profiles";
+import SellerDetails from "./Pages/Dashboard/Seller/SellerDetails/SellerDetails";
+import Home from "./Pages/Home/Home/Home";
+import BidForJob from "./Pages/Job's/BidForJob/BidForJob";
+import Jobs from "./Pages/Job's/Jobs";
+// import AdminRoute from "./Pages/LogIn/AdminRoute/AdminRoute";
+import LogIn from "./Pages/LogIn/LogIn/LogIn";
+import PrivateRoute from "./Pages/LogIn/PrivateRoute/PrivateRoute";
+import Register from "./Pages/LogIn/Register/Register";
+import Punishment from "./Pages/Punishment/Punishment";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <NavigationBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="jobs" element={<Jobs />} />
-          <Route path="jobDetails" element={<JobDetails />} />
-          <Route path="seller-profile" element={<SellerDetails />} />
-          <Route path="gig_details" element={<GigDetails />} />
-          <Route path="seller-profile" element={<SellerDetails />} />
-          <Route path="gig_details" element={<GigDetails />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<Login />} />
+    <div>
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/login">
+              <LogIn />
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            {/* <AdminRoute exact path="/">
+              <Home></Home>
+            </AdminRoute> */}
+            {/* <AdminRoute path="/home">
+              <Home></Home>
+            </AdminRoute> */}
+            {/* <Route path="/contact">
+              <Contact></Contact>
+            </Route> */}
 
-          {/* dashboard starts */}
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route exact path="/dashboard" element={<Users></Users>} />
-            <Route path={`/dashboard/allUsers`} element={<Users></Users>} />
-            <Route
-              path={`/dashboard/bestSellers`}
-              element={<BestSellers></BestSellers>}
-            />
-          </Route>
-          {/* dashboard ends */}
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+            <PrivateRoute path="/jobs">
+              <Jobs></Jobs>
+            </PrivateRoute>
+            {/* <PrivateRoute path="/complain">
+              <Comp
+            </PrivateRoute> */}
+
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+            <PrivateRoute path="/developers">
+              <Profiles></Profiles>
+            </PrivateRoute>
+            <PrivateRoute path="/sellerProfile/:sellerId">
+              <SellerDetails></SellerDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/buyerDetails/:jobsId">
+              <BuyerDetails></BuyerDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/bidding/:jobsDetails">
+              <BidForJob></BidForJob>
+            </PrivateRoute>
+            {/* <AdminRoute path="/blocked">
+              <Punishment></Punishment>
+            </AdminRoute> */}
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
