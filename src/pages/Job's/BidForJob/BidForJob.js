@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Navigation from "../../Shared/Navigation/Navigation";
-import BidPost from "./BidPost/BidPost";
 
 const BidForJob = () => {
   const { jobsDetails } = useParams();
@@ -12,7 +11,6 @@ const BidForJob = () => {
   const [value, setValue] = React.useState(0);
   const [ratings, setRatings] = useState(4);
   const { user } = useAuth();
-  console.log(user);
 
   useEffect(() => {
     fetch(`http://localhost:5000/jobs/${jobsDetails}`)
@@ -22,7 +20,6 @@ const BidForJob = () => {
         setLoading(false);
       });
   }, []);
-
   return (
     <div>
       <Navigation></Navigation>
@@ -72,10 +69,6 @@ const BidForJob = () => {
               prefer customer's satisfaction.
             </p>
             {/* <button className="btn " style={{ backgroundColor: '#A3A9A4', marginTop: '5px' }} ><Link to={`/dashboard/updateSeller/${sll._id}`} style={{ textDecoration: 'none', color: 'white' }}>Update Profile</Link></button> */}
-          </div>
-
-          <div className="bid-jobs">
-            <BidPost jobId={details._id} />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
-// import emailjs from "emailjs-com";
 // import React from "react";
-// import { useHistory } from "react-router-dom";
+// import emailjs from "emailjs-com";
 // import "./Contact.css";
+// import { useHistory } from "react-router-dom";
 // const Contact = ({ setLoginUser2 }) => {
 //   function sendEmail(e) {
 //     e.preventDefault();
